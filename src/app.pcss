@@ -26,10 +26,14 @@
 			@apply text-5xl uppercase text-center;
 		}
 		ul {
-			@apply list-none flex flex-wrap flex-col items-center max-h-screen gap-0 p-0;
+			@apply list-none flex flex-wrap items-center max-h-[480px] overflow-y-scroll gap-0 p-0;
 			li {
-				@apply text-xl;
+				@apply text-xl break-inside-avoid;
+				flex: 1 0 33%;
 			}
 		}
+	}
+	footer p {
+		@apply text-4xl text-center text-red;
 	}
 }
