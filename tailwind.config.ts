@@ -10,6 +10,7 @@ export default {
 	},
 
 	plugins: [typography, daisyui],
+
 	daisyui: {
 		themes: [
 			{
@@ -24,6 +25,7 @@ export default {
 					warning: "#bd490f",
 					error: "#ca0241"
 				},
+
 				dark: {
 					primary: "#03a1fb",
 					secondary: "#63b8e9",
