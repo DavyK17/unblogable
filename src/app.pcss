@@ -5,15 +5,31 @@
 
 @layer components {
 	body {
-		@apply bg-base-200;
+		@apply bg-base-200 font-mono;
 	}
-	h1 {
-		@apply text-5xl font-bold text-base-100 font-serif;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-black dark:text-white;
 	}
 	.hero-caption {
 		@apply text-xl py-8;
 	}
 	.hero-button {
-		@apply btn btn-primary uppercase text-lg hover:btn-secondary;
+		@apply btn btn-primary uppercase text-xl font-semibold min-h-14;
+	}
+	.blacklist {
+		h2 {
+			@apply text-5xl uppercase text-center;
+		}
+		ul {
+			@apply list-none flex flex-wrap flex-col items-center max-h-screen gap-0 p-0;
+			li {
+				@apply text-xl;
+			}
+		}
 	}
 }
