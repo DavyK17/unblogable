@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Fatal Error | unblogable.</title>
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Log into your Koloseum account or sign up today." />
+
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/logo192.png" />
+		<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
+
+		<style>
+			html {
+				font-size: 20px;
+			}
+
+			body {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				margin: unset;
+				font-family: monospace;
+			}
+
+			.error {
+				display: flex;
+				height: 100%;
+				flex-direction: column;
+				text-align: center;
+				margin-top: 5rem;
+			}
+
+			h1 {
+				font-family: serif;
+				font-size: 2rem;
+				font-weight: 600;
+				color: #922529;
+				text-transform: uppercase;
+				margin: unset;
+			}
+
+			p {
+				font-size: 1rem;
+				font-weight: 400;
+			}
+
+			small {
+				font-size: 0.75rem;
+				font-weight: 200;
+				color: #008c51;
+				opacity: 0.6;
+			}
+
+			@media (prefers-color-scheme: light) {
+				body {
+					background-color: #fff;
+					color: #000;
+				}
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background-color: #000;
+					color: #fff;
+				}
+			}
+		</style>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div class="error">
+			<header>
+				<h1>Anguka nayo!</h1>
+			</header>
+			<main>
+				<p>An unexpected error occurred while rendering the page. Kindly refresh and try again.</p>
+			</main>
+			<footer>
+				<small>[STATUS CODE %sveltekit.status%]</small>
+			</footer>
+		</div>
+	</body>
+</html>
