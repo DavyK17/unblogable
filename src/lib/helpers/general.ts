@@ -52,7 +52,12 @@ export const Utility = {
 	 * @returns A sanitised string, or an empty string if the input is invalid
 	 */
 	sanitiseHtml: (input: string) =>
-		typeof input !== "string" ? "" : sanitize(input, { allowedTags: [], allowedAttributes: {} })
+		typeof input !== "string" ? "" : sanitize(input, { allowedTags: [], allowedAttributes: {} }),
+	/**
+	 * A regular expression for a user ID on X (formerly Twitter). It covers the following rules:
+	 * - 1 or more digits
+	 */
+	xUserIDRegex: /^\d+$/
 };
 
 /* Dummy blacklist */
