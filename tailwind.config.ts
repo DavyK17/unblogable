@@ -23,13 +23,13 @@ export default {
 			{
 				light: {
 					...lofi,
-					"base-100": "#000"
+					"base-100": "#fff"
 				}
 			},
 			{
 				dark: {
 					...black,
-					"base-100": "#fff"
+					"base-100": "#000"
 				}
 			}
 		]
