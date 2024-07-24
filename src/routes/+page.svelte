@@ -1,8 +1,4 @@
-<script lang="ts">
-	import "../app.pcss";
-</script>
-
-<main class="hero bg-base-200 min-h-screen">
+<main class="hero min-h-screen">
 	<div class="hero-content text-center">
 		<div class="max-w-md">
 			<h1 class="text-5xl font-bold text-base-100">
@@ -12,7 +8,7 @@
 				Boycott influencers sanitising the bloodthirsty Ruto regime on X (formerly Twitter) by
 				playing politics with the lives of innocent Kenyans!
 			</p>
-			<button class="btn btn-primary uppercase text-lg">Fanya ile kitu</button>
+			<button class="btn btn-primary uppercase text-lg font-semibold">Fanya ile kitu</button>
 		</div>
 	</div>
 </main>
