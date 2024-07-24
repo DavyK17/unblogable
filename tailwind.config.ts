@@ -8,7 +8,12 @@ export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				red: "#922529",
+				green: "#008C51"
+			}
+		}
 	},
 
 	plugins: [typography, daisyui],

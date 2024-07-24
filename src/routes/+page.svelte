@@ -2,7 +2,7 @@
 	<div class="hero-content text-center">
 		<div class="max-w-md">
 			<h1 class="text-5xl font-bold text-base-100">
-				un<span class="text-[#922529]">blog</span><span class="text-[#008C51]">able</span>.
+				un<span class="text-red">blog</span><span class="text-green">able</span>.
 			</h1>
 			<p class="hero-caption">
 				Boycott influencers sanitising the bloodthirsty Ruto regime on X (formerly Twitter) by
