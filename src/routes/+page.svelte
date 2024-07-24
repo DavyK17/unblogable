@@ -23,7 +23,9 @@
 				Boycott influencers sanitising the bloodthirsty Ruto regime on X (formerly Twitter) by
 				spreading misinformation and playing politics with the lives of innocent Kenyans!
 			</p>
-			<button class="hero-button">Connect your account</button>
+			<form method="post" action="?/auth">
+				<button class="hero-button" type="submit">Connect your account</button>
+			</form>
 		</div>
 	</div>
 </main>
