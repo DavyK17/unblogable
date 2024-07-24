@@ -1,11 +1,12 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 export default {
-    content: ["./src/**/*.{html,js,svelte,ts}"],
+	content: ["./src/**/*.{html,js,svelte,ts}"],
 
-    theme: {
-        extend: {}
-    },
+	theme: {
+		extend: {}
+	},
 
-    plugins: [require("@tailwindcss/typography")]
+	plugins: [typography]
 } as Config;
