@@ -9,7 +9,7 @@
 				un<span class="text-[#922529]">blog</span><span class="text-[#008C51]">able</span>.
 			</h1>
 			<p class="hero-caption">
-				Isolate influencers sanitising the bloodthirsty Ruto regime on X (formerly Twitter) by
+				Boycott influencers sanitising the bloodthirsty Ruto regime on X (formerly Twitter) by
 				playing politics with the lives of innocent Kenyans!
 			</p>
 			<button class="btn btn-primary uppercase text-lg">Fanya ile kitu</button>
