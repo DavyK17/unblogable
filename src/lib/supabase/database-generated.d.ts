@@ -31,18 +31,18 @@ export type Database = {
 			blacklist: {
 				Row: {
 					added_at: string;
-					x_handle: string;
-					x_user_id: string;
+					handle: string;
+					influencer_id: string;
 				};
 				Insert: {
 					added_at?: string;
-					x_handle: string;
-					x_user_id: string;
+					handle: string;
+					influencer_id: string;
 				};
 				Update: {
 					added_at?: string;
-					x_handle?: string;
-					x_user_id?: string;
+					handle?: string;
+					influencer_id?: string;
 				};
 				Relationships: [];
 			};
@@ -68,14 +68,7 @@ export type Database = {
 						columns: ["influencer_id"];
 						isOneToOne: false;
 						referencedRelation: "blacklist";
-						referencedColumns: ["x_user_id"];
-					},
-					{
-						foreignKeyName: "public_boycotted_influencers_user_id_fkey";
-						columns: ["user_id"];
-						isOneToOne: false;
-						referencedRelation: "users";
-						referencedColumns: ["id"];
+						referencedColumns: ["influencer_id"];
 					}
 				];
 			};

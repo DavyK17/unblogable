@@ -37,16 +37,16 @@ SET default_tablespace = '';
 SET default_table_access_method = "heap";
 
 CREATE TABLE IF NOT EXISTS "public"."blacklist" (
-    "x_user_id" "text" NOT NULL,
-    "x_handle" "text" NOT NULL,
+    "influencer_id" "text" NOT NULL,
+    "handle" "text" NOT NULL,
     "added_at" timestamp with time zone DEFAULT "now"() NOT NULL,
-    CONSTRAINT "blacklist_x_handle_check" CHECK (("x_handle" ~ '^\d+$'::"text"))
+    CONSTRAINT "blacklist_handle_check" CHECK (("handle" ~ '^\d+$'::"text"))
 );
 
 ALTER TABLE "public"."blacklist" OWNER TO "postgres";
 
 CREATE TABLE IF NOT EXISTS "public"."boycotted_influencers" (
-    "user_id" "uuid" NOT NULL,
+    "user_id" "text" NOT NULL,
     "influencer_id" "text" NOT NULL,
     "boycotted_at" timestamp with time zone DEFAULT "now"() NOT NULL
 );
@@ -54,19 +54,16 @@ CREATE TABLE IF NOT EXISTS "public"."boycotted_influencers" (
 ALTER TABLE "public"."boycotted_influencers" OWNER TO "postgres";
 
 ALTER TABLE ONLY "public"."blacklist"
-    ADD CONSTRAINT "blacklist_pkey" PRIMARY KEY ("x_user_id");
+    ADD CONSTRAINT "blacklist_pkey" PRIMARY KEY ("influencer_id");
 
 ALTER TABLE ONLY "public"."blacklist"
-    ADD CONSTRAINT "blacklist_x_handle_key" UNIQUE ("x_handle");
+    ADD CONSTRAINT "blacklist_handle_key" UNIQUE ("handle");
 
 ALTER TABLE ONLY "public"."boycotted_influencers"
     ADD CONSTRAINT "boycotted_influencers_pkey" PRIMARY KEY ("user_id", "influencer_id");
 
 ALTER TABLE ONLY "public"."boycotted_influencers"
-    ADD CONSTRAINT "public_boycotted_influencers_influencer_id_fkey" FOREIGN KEY ("influencer_id") REFERENCES "public"."blacklist"("x_user_id") ON UPDATE CASCADE ON DELETE CASCADE;
-
-ALTER TABLE ONLY "public"."boycotted_influencers"
-    ADD CONSTRAINT "public_boycotted_influencers_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "auth"."users"("id") ON UPDATE CASCADE ON DELETE CASCADE;
+    ADD CONSTRAINT "public_boycotted_influencers_influencer_id_fkey" FOREIGN KEY ("influencer_id") REFERENCES "public"."blacklist"("influencer_id") ON UPDATE CASCADE ON DELETE CASCADE;
 
 CREATE POLICY "Enable read access for all users" ON "public"."blacklist" FOR SELECT USING (true);
 
