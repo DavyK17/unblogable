@@ -135,9 +135,9 @@ auth_token = "env(SUPABASE_AUTH_SMS_TWILIO_AUTH_TOKEN)"
 # `twitter`, `slack`, `spotify`, `workos`, `zoom`.
 [auth.external.twitter]
 enabled = true
-client_id = "env(SUPABASE_AUTH_EXTERNAL_TWITTER_CLIENT)"
+client_id = "env(SUPABASE_AUTH_EXTERNAL_X_CLIENT_ID)"
 # DO NOT commit your OAuth provider secret to git. Use environment variable substitution instead:
-secret = "env(SUPABASE_AUTH_EXTERNAL_TWITTER_SECRET)"
+secret = "env(SUPABASE_AUTH_EXTERNAL_X_CLIENT_SECRET)"
 # Overrides the default auth redirectUrl.
 redirect_uri = ""
 # Overrides the default auth provider URL. Used to support self-hosted gitlab, single-tenant Azure,
