@@ -31,7 +31,7 @@
 				spreading misinformation and playing politics with the lives of innocent Kenyans!
 			</p>
 			<form method="post" {action}>
-				<button class="hero-button" type="submit">{buttonLabel}</button>
+				<button class="hero-button" type="submit" disabled>{buttonLabel}</button>
 			</form>
 		</div>
 	</div>
