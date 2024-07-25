@@ -1,5 +1,9 @@
 <script lang="ts">
+	import type { PageData } from "./$types";
 	import { DummyBlacklist } from "$lib/helpers";
+
+	export let data: PageData;
+	const { user } = data;
 
 	const blacklist = DummyBlacklist.sort((a, b) => {
 		// Convert both strings to lower case for a case-insensitive comparison
@@ -11,6 +15,9 @@
 		if (lowerA > lowerB) return 1;
 		return 0;
 	});
+
+	$: action = user ? "?/boycott" : "?/auth";
+	$: buttonLabel = user ? "Fanya ile kitu!" : "Connect your account";
 </script>
 
 <main class="hero min-h-screen">
@@ -23,8 +30,8 @@
 				Boycott influencers sanitising the bloodthirsty Ruto regime on X (formerly Twitter) by
 				spreading misinformation and playing politics with the lives of innocent Kenyans!
 			</p>
-			<form method="post" action="?/auth">
-				<button class="hero-button" type="submit">Connect your account</button>
+			<form method="post" {action}>
+				<button class="hero-button" type="submit">{buttonLabel}</button>
 			</form>
 		</div>
 	</div>
