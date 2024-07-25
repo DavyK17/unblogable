@@ -71,7 +71,7 @@ file_size_limit = "50MiB"
 enabled = true
 
 [auth]
-enabled = true
+enabled = false
 # The base URL of your website. Used as an allow-list for redirects and for constructing URLs used
 # in emails.
 site_url = "http://127.0.0.1:5173"
@@ -134,10 +134,10 @@ auth_token = "env(SUPABASE_AUTH_SMS_TWILIO_AUTH_TOKEN)"
 # `discord`, `facebook`, `github`, `gitlab`, `google`, `keycloak`, `linkedin_oidc`, `notion`, `twitch`,
 # `twitter`, `slack`, `spotify`, `workos`, `zoom`.
 [auth.external.twitter]
-enabled = true
-client_id = "env(SUPABASE_AUTH_EXTERNAL_X_CLIENT_ID)"
+enabled = false
+client_id = "env(X_CLIENT_ID)"
 # DO NOT commit your OAuth provider secret to git. Use environment variable substitution instead:
-secret = "env(SUPABASE_AUTH_EXTERNAL_X_CLIENT_SECRET)"
+secret = "env(X_CLIENT_SECRET)"
 # Overrides the default auth redirectUrl.
 redirect_uri = ""
 # Overrides the default auth provider URL. Used to support self-hosted gitlab, single-tenant Azure,
